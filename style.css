@@ -12,7 +12,7 @@ body {
   font-family: 'Roboto', sans-serif;
   overflow-x: hidden;
   perspective: 1500px;
-  background: #17c582; /* Background color */
+  background: #17c582;
   color: #fff;
 }
 
@@ -214,9 +214,14 @@ button:hover {
 /* Fix for small screens */
 @media (max-width: 768px) {
   .extra-photo {
+    position: relative;
     width: 100px;
     height: 100px;
-    top: 60px;
+    top: auto;
+    left: auto;
+    right: auto;
+    margin: 10px auto;
+    display: block;
   }
 
   .message-card h2 {
