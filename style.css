@@ -215,3 +215,13 @@ button:hover {
   top: 20px;
   right: 20px;
 }
+
+
+/* --- Mobile Fix: Keep Left-Right but Avoid Overlap --- */
+@media (max-width: 768px) {
+  .extra-photo {
+    width: 100px;       /* smaller size */
+    height: 100px;
+    top: 80px !important; /* push them lower so they don't overlap heading */
+  }
+}
