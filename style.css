@@ -217,11 +217,21 @@ button:hover {
 }
 
 
-/* --- Mobile Fix: Keep Left-Right but Avoid Overlap --- */
+/* Force Desktop Layout for Mobile */
+body {
+  min-width: 1024px; /* page behaves like desktop always */
+}
+
+/* Fix for images on small screens */
 @media (max-width: 768px) {
   .extra-photo {
-    width: 100px;       /* smaller size */
+    width: 100px;
     height: 100px;
-    top: 80px !important; /* push them lower so they don't overlap heading */
+    top: 60px;
+  }
+
+  .message-card h2 {
+    font-size: 2em; /* make heading slightly smaller */
   }
 }
+
