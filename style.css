@@ -250,3 +250,48 @@ button:hover {
     font-size: 1.4em;
   }
 }
+
+
+/* Neon Container for both images */
+/* Neon Container tightly around images */
+/* Neon Container tightly around images and centered */
+.neon-photo-container {
+  display: flex;                 /* use flex to center images inside */
+  justify-content: center;       /* center images horizontally */
+  align-items: center;
+  gap: 15px;                     /* gap between images */
+  padding: 10px 5px;             /* small padding inside */
+  border: 1px solid #00ffff;     /* thin blue neon border */
+  border-radius: 20px;           /* rounded corners */
+  box-shadow:
+    0 0 5px #00ffff,
+    0 0 10px #00ffff;            /* soft blue glow */
+  margin: 0 auto 20px auto;       /* center container horizontally and spacing below */
+  background: rgba(0,0,0,0.1);   /* optional slight background */
+  width: fit-content;             /* shrink-wrap to images width */
+}
+
+
+
+
+/* Images inside the container */
+.neon-photo-container .extra-photo {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+
+
+
+/* Responsive for small screens */
+@media (max-width: 480px) {
+  .neon-photo-container .extra-photo {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+
