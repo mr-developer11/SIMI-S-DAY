@@ -3,13 +3,26 @@
 
 /* Body & Background */
 body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
   overflow-x: hidden;
   perspective: 1500px;
-  background: #17c582; /* BLACK BACKGROUND */
+  background: #17c582; /* Background color */
   color: #fff;
+}
+
+.intro-section,
+.content-section,
+#sorry-section {
+  max-width: 100%;
+  width: 90%;
+  margin: 20px auto;
+  box-sizing: border-box;
 }
 
 /* Particle Canvas */
@@ -46,6 +59,13 @@ body {
   font-size: 3em;
   color: #2196f3;
   margin-top: 20px;
+  -webkit-text-stroke: 1px #aaa;
+  text-stroke: 1px #aaa;
+  text-shadow: 
+    0 0 5px #2196f3,
+    0 0 10px #2196f3,
+    0 0 20px #2196f3,
+    0 0 40px #2196f3;
 }
 
 /* Bounce Animation */
@@ -124,8 +144,6 @@ button:hover {
   animation-name: riseUp;
   animation-timing-function: linear;
   animation-iteration-count: 1;
-
-  /* Neon Glow */
   text-shadow:
     0 0 5px #ff00ff,
     0 0 10px #ff00ff,
@@ -144,23 +162,21 @@ button:hover {
   100% { transform: translateY(-110vh) rotate(0deg) scale(1.2); opacity: 0; }
 }
 
-
 .simi-photo {
-  width: 250px;         /* adjust size */
-  border-radius: 50%;   /* makes it circular */
+  width: 250px;
+  border-radius: 50%;
   border: 5px solid #ff4081;
   box-shadow: 0 0 30px rgba(255, 64, 129, 0.6);
   margin-bottom: 20px;
   animation: fadeInUp 2s ease-out forwards;
 }
 
-
 .circle-photo {
-  width: 250px;          /* size of the circle */
+  width: 250px;
   height: 250px;
-  border-radius: 50%;    /* makes it a circle */
-  overflow: hidden;      /* ensures image fits inside */
-  border: 6px solid #ff4081;   /* pink border */
+  border-radius: 50%;
+  overflow: hidden;
+  border: 6px solid #ff4081;
   box-shadow: 0 0 30px rgba(255, 64, 129, 0.6);
   display: flex;
   align-items: center;
@@ -172,57 +188,30 @@ button:hover {
 .circle-photo img {
   width: 100%;
   height: 100%;
-  object-fit: cover;     /* ensures image fills circle properly */
+  object-fit: cover;
 }
-
-.poster-text {
-  font-family: 'Pacifico', cursive;
-  font-size: 3em;
-  color: #2196f3;  /* neon blue text */
-  margin-top: 20px;
-
-  /* Grey thin border */
-  -webkit-text-stroke: 1px #aaa; /* thin grey outline */
-  text-stroke: 1px #aaa; /* for supported browsers */
-
-  /* Neon glow */
-  text-shadow: 
-    0 0 5px #2196f3,
-    0 0 10px #2196f3,
-    0 0 20px #2196f3,
-    0 0 40px #2196f3;
-}
-
 
 /* Extra Photos */
 .extra-photo {
-  width: 150px;   /* square size increased */
-  height: 150px;  /* square size increased */
+  width: 150px;
+  height: 150px;
   object-fit: cover;
   position: absolute;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
-/* Left Upper Corner */
 .extra-photo.left {
   top: 20px;
   left: 20px;
 }
 
-/* Right Upper Corner */
 .extra-photo.right {
   top: 20px;
   right: 20px;
 }
 
-
-/* Force Desktop Layout for Mobile */
-body {
-  min-width: 1024px; /* page behaves like desktop always */
-}
-
-/* Fix for images on small screens */
+/* Fix for small screens */
 @media (max-width: 768px) {
   .extra-photo {
     width: 100px;
@@ -231,7 +220,6 @@ body {
   }
 
   .message-card h2 {
-    font-size: 2em; /* make heading slightly smaller */
+    font-size: 2em;
   }
 }
-
