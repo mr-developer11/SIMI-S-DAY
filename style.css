@@ -1,0 +1,297 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto&display=swap');
+
+/* Body & Background */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
+  perspective: 1500px;
+  background: #17c582;
+  color: #fff;
+}
+
+/* Sections */
+.intro-section,
+.content-section,
+#sorry-section {
+  max-width: 100%;
+  width: 90%;
+  margin: 20px auto;
+  box-sizing: border-box;
+}
+
+/* Particle Canvas */
+#particle-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  z-index: -1;
+}
+
+/* Intro Section */
+.intro-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  animation: fadeInUp 2s ease-out forwards;
+}
+
+/* Circle Photo */
+.circle-photo {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 6px solid #ff4081;
+  box-shadow: 0 0 30px rgba(255, 64, 129, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  animation: fadeInUp 2s ease-out forwards;
+}
+
+.circle-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Poster Text */
+.poster-text {
+  font-family: 'Pacifico', cursive;
+  font-size: 3em;
+  color: #2196f3;
+  margin-top: 20px;
+  -webkit-text-stroke: 1px #aaa;
+  text-stroke: 1px #aaa;
+  text-shadow:
+    0 0 5px #2196f3,
+    0 0 10px #2196f3,
+    0 0 20px #2196f3,
+    0 0 40px #2196f3;
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-30px); }
+  60% { transform: translateY(-15px); }
+}
+
+/* Fade In Up */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Content Section */
+.content-section {
+  padding: 60px 20px;
+  background: #ff4081;
+  border-radius: 20px;
+  max-width: 800px;
+  margin: -100px auto 60px auto;
+  box-shadow: 0 10px 30px rgba(255, 64, 129, 0.3);
+  transform-style: preserve-3d;
+}
+
+/* Message Card */
+.message-card h2 {
+  text-align: center;
+  font-family: 'Pacifico', cursive;
+  font-size: 2.5em;
+  color: #FFD700;
+  margin-bottom: 20px;
+}
+
+.message-card p {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.6em;
+  line-height: 1.8;
+  color: yellow;
+  text-align: center;
+  text-shadow: 1px 1px 8px rgba(255, 255, 0, 0.4);
+  letter-spacing: 1px;
+}
+
+/* Extra Photos Container */
+.extra-photos-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* gap between images */
+  margin-bottom: 20px; /* space below images before text */
+  flex-wrap: wrap; /* wrap on small screens */
+}
+
+/* Extra Photos */
+.extra-photo {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  position: static; /* static for flex layout */
+}
+
+/* Buttons */
+.buttons {
+  margin-top: 30px;
+  text-align: center;
+}
+
+button {
+  padding: 12px 25px;
+  font-size: 1.1em;
+  background: #ff4081;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  margin: 10px;
+}
+
+button:hover {
+  background: #e73370;
+  transform: scale(1.05);
+}
+
+/* Floating Emojis */
+.emoji {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.9;
+  animation-name: riseUp;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  text-shadow:
+    0 0 5px #ff00ff,
+    0 0 10px #ff00ff,
+    0 0 20px #ff00ff,
+    0 0 40px #ff00ff,
+    0 0 80px #ff00ff;
+  font-size: 28px;
+}
+
+/* Emoji Animation */
+@keyframes riseUp {
+  0%   { transform: translateY(0) rotate(0deg) scale(1); opacity: 1; }
+  25%  { transform: translateY(-25vh) rotate(-10deg) scale(1.05); }
+  50%  { transform: translateY(-50vh) rotate(10deg) scale(1.1); }
+  75%  { transform: translateY(-75vh) rotate(-5deg) scale(1.05); }
+  100% { transform: translateY(-110vh) rotate(0deg) scale(1.2); opacity: 0; }
+}
+
+/* Sorry Section */
+#sorry-section {
+  padding: 60px 20px;
+  background: #ff4081;
+  border-radius: 20px;
+  max-width: 900px;
+  margin: 80px auto;
+  box-shadow: 0 10px 30px rgba(255, 64, 129, 0.3);
+}
+
+#sorry-section h2 {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.5em;
+  color: #FFD700;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#sorry-section p {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.6em;
+  line-height: 1.8;
+  color: yellow;
+  text-align: center;
+  text-shadow: 1px 1px 8px rgba(255, 255, 0, 0.4);
+  letter-spacing: 1px;
+  white-space: pre-line;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .message-card h2 {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 480px) {
+  .extra-photos-container {
+    gap: 10px;
+  }
+
+  .extra-photo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .message-card h2 {
+    font-size: 1.8em;
+  }
+
+  .message-card p {
+    font-size: 1.4em;
+  }
+}
+
+
+/* Neon Container for both images */
+/* Neon Container tightly around images */
+/* Neon Container tightly around images and centered */
+.neon-photo-container {
+  display: flex;                 /* use flex to center images inside */
+  justify-content: center;       /* center images horizontally */
+  align-items: center;
+  gap: 15px;                     /* gap between images */
+  padding: 10px 5px;             /* small padding inside */
+  border: 1px solid #00ffff;     /* thin blue neon border */
+  border-radius: 20px;           /* rounded corners */
+  box-shadow:
+    0 0 5px #00ffff,
+    0 0 10px #00ffff;            /* soft blue glow */
+  margin: 0 auto 20px auto;       /* center container horizontally and spacing below */
+  background: rgba(0,0,0,0.1);   /* optional slight background */
+  width: fit-content;             /* shrink-wrap to images width */
+}
+
+
+
+
+/* Images inside the container */
+.neon-photo-container .extra-photo {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+
+
+
+/* Responsive for small screens */
+@media (max-width: 480px) {
+  .neon-photo-container .extra-photo {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+
