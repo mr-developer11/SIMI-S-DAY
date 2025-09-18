@@ -118,11 +118,7 @@ body {
 }
 
 .message-card p {
-<<<<<<< HEAD
-  font-family: 'Comic Sans MS', cursive, sans-serif;
-=======
   font-family: 'Dancing Script', cursive;
->>>>>>> 37b5f00f039381ee39d38b7346f97b479f5557bd
   font-size: 1.6em;
   line-height: 1.8;
   color: yellow;
@@ -131,17 +127,18 @@ body {
   letter-spacing: 1px;
 }
 
-<<<<<<< HEAD
+/* TODAY'S TEXT - Comic Sans MS */
+.message-card h2 + p {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
 
-=======
->>>>>>> 37b5f00f039381ee39d38b7346f97b479f5557bd
 /* Extra Photos Container */
 .extra-photos-container {
   display: flex;
   justify-content: center;
-  gap: 15px; /* gap between images */
-  margin-bottom: 20px; /* space below images before text */
-  flex-wrap: wrap; /* wrap on small screens */
+  gap: 15px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
 }
 
 /* Extra Photos */
@@ -151,7 +148,7 @@ body {
   object-fit: cover;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-  position: static; /* static for flex layout */
+  position: static;
 }
 
 /* Buttons */
@@ -223,11 +220,7 @@ button:hover {
 }
 
 #sorry-section p {
-<<<<<<< HEAD
-  font-family: 'Comic Sans MS', cursive, sans-serif !important;
-=======
-  font-family: 'Dancing Script', cursive;
->>>>>>> 37b5f00f039381ee39d38b7346f97b479f5557bd
+  font-family: "Comic Sans MS", cursive, sans-serif; /* updated to Comic Sans MS */
   font-size: 1.6em;
   line-height: 1.8;
   color: yellow;
@@ -263,28 +256,22 @@ button:hover {
   }
 }
 
-
 /* Neon Container for both images */
-/* Neon Container tightly around images */
-/* Neon Container tightly around images and centered */
 .neon-photo-container {
-  display: flex;                 /* use flex to center images inside */
-  justify-content: center;       /* center images horizontally */
+  display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 15px;                     /* gap between images */
-  padding: 10px 5px;             /* small padding inside */
-  border: 1px solid #00ffff;     /* thin blue neon border */
-  border-radius: 20px;           /* rounded corners */
+  gap: 15px;
+  padding: 10px 5px;
+  border: 1px solid #00ffff;
+  border-radius: 20px;
   box-shadow:
     0 0 5px #00ffff,
-    0 0 10px #00ffff;            /* soft blue glow */
-  margin: 0 auto 20px auto;       /* center container horizontally and spacing below */
-  background: rgba(0,0,0,0.1);   /* optional slight background */
-  width: fit-content;             /* shrink-wrap to images width */
+    0 0 10px #00ffff;
+  margin: 0 auto 20px auto;
+  background: rgba(0,0,0,0.1);
+  width: fit-content;
 }
-
-
-
 
 /* Images inside the container */
 .neon-photo-container .extra-photo {
@@ -295,9 +282,6 @@ button:hover {
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
-
-
-
 /* Responsive for small screens */
 @media (max-width: 480px) {
   .neon-photo-container .extra-photo {
@@ -307,3 +291,6 @@ button:hover {
 }
 
 
+#sorry-section * {
+  font-family: "Comic Sans MS", cursive, sans-serif !important;
+}
