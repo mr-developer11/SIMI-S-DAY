@@ -118,18 +118,13 @@ body {
 }
 
 .message-card p {
-  font-family: 'Dancing Script', cursive;
+  font-family: "Comic Sans MS", cursive, sans-serif; /* Updated font */
   font-size: 1.6em;
   line-height: 1.8;
   color: yellow;
   text-align: center;
   text-shadow: 1px 1px 8px rgba(255, 255, 0, 0.4);
   letter-spacing: 1px;
-}
-
-/* TODAY'S TEXT - Comic Sans MS */
-.message-card h2 + p {
-  font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
 /* Extra Photos Container */
@@ -220,7 +215,7 @@ button:hover {
 }
 
 #sorry-section p {
-  font-family: "Comic Sans MS", cursive, sans-serif; /* updated to Comic Sans MS */
+  font-family: "Comic Sans MS", cursive, sans-serif; /* Force Comic Sans MS */
   font-size: 1.6em;
   line-height: 1.8;
   color: yellow;
@@ -256,7 +251,7 @@ button:hover {
   }
 }
 
-/* Neon Container for both images */
+/* Neon Container */
 .neon-photo-container {
   display: flex;
   justify-content: center;
@@ -273,7 +268,7 @@ button:hover {
   width: fit-content;
 }
 
-/* Images inside the container */
+/* Neon Images */
 .neon-photo-container .extra-photo {
   width: 150px;
   height: 150px;
@@ -282,15 +277,10 @@ button:hover {
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
-/* Responsive for small screens */
+/* Responsive Neon Images */
 @media (max-width: 480px) {
   .neon-photo-container .extra-photo {
     width: 100px;
     height: 100px;
   }
-}
-
-
-#sorry-section * {
-  font-family: "Comic Sans MS", cursive, sans-serif !important;
 }
