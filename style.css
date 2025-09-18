@@ -118,7 +118,11 @@ body {
 }
 
 .message-card p {
+<<<<<<< HEAD
   font-family: 'Comic Sans MS', cursive, sans-serif;
+=======
+  font-family: 'Dancing Script', cursive;
+>>>>>>> 37b5f00f039381ee39d38b7346f97b479f5557bd
   font-size: 1.6em;
   line-height: 1.8;
   color: yellow;
@@ -127,7 +131,10 @@ body {
   letter-spacing: 1px;
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 37b5f00f039381ee39d38b7346f97b479f5557bd
 /* Extra Photos Container */
 .extra-photos-container {
   display: flex;
@@ -216,7 +223,11 @@ button:hover {
 }
 
 #sorry-section p {
+<<<<<<< HEAD
   font-family: 'Comic Sans MS', cursive, sans-serif !important;
+=======
+  font-family: 'Dancing Script', cursive;
+>>>>>>> 37b5f00f039381ee39d38b7346f97b479f5557bd
   font-size: 1.6em;
   line-height: 1.8;
   color: yellow;
