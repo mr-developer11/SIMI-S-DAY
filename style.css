@@ -118,7 +118,7 @@ body {
 }
 
 .message-card p {
-  font-family: 'Dancing Script', cursive;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
   font-size: 1.6em;
   line-height: 1.8;
   color: yellow;
@@ -126,6 +126,7 @@ body {
   text-shadow: 1px 1px 8px rgba(255, 255, 0, 0.4);
   letter-spacing: 1px;
 }
+
 
 /* Extra Photos Container */
 .extra-photos-container {
@@ -215,7 +216,7 @@ button:hover {
 }
 
 #sorry-section p {
-  font-family: 'Dancing Script', cursive;
+  font-family: 'Comic Sans MS', cursive, sans-serif !important;
   font-size: 1.6em;
   line-height: 1.8;
   color: yellow;
