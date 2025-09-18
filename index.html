@@ -7,9 +7,10 @@
 
   <title>Happy Birthday Soumili 🎉</title>
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Dancing+Script:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css"> <!-- previous CSS (neon, pink, yellow) -->
+  <link rel="stylesheet" href="style.css">
+
   <style>
-    /* Sorry Section Card - same pink background + yellow text */
+    /* Sorry Section Card */
     #sorry-section {
       padding: 60px 20px;
       background: #ff4081;
@@ -42,7 +43,7 @@
 
 <body>
 
-  <!-- Birthday Template (unchanged) -->
+  <!-- Birthday Template -->
   <canvas id="particle-canvas"></canvas>
   <div class="intro-section">
     <div class="circle-photo">
@@ -52,7 +53,6 @@
   </div>
 
   <div class="content-section position-relative">
-
     <!-- Neon Container with Both Photos -->
     <div class="neon-photo-container">
       <img src="simi1.jpg" class="extra-photo" alt="Simi 1">
@@ -61,7 +61,6 @@
 
     <div class="message-card">
       <h2>💌 Today’s Your Day!</h2>
-
       <p>
         Wishing you a year filled with success, happiness, and new opportunities... <br><br>
         From school days to your present journey, your strength, determination, and hard work continue to inspire many.<br><br>
@@ -74,7 +73,7 @@
     </div>
   </div>
 
-  <!-- Separate Sorry Section (Scroll down to see) -->
+  <!-- Sorry Section -->
   <div id="sorry-section">
     <h2>....🙃🙃SORRY🙃🙃....</h2>
     <p>
@@ -103,28 +102,36 @@ and I’ll try my best to never let that smile fade again. 💌
     </p>
   </div>
 
-  <!-- Confetti + Fireworks Scripts (unchanged) -->
+  <!-- Confetti + Fireworks -->
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
-  <script src="script.js"></script> <!-- heart, balloon, fireworks, neon -->
+  <script src="script.js"></script>
 
   <!-- Background Music -->
-  <audio id="bg-music" autoplay loop muted>
-    <source src="love.mp3" type="audio/mpeg">
-  </audio>
+<!-- Background Music -->
+<audio id="bg-music" src="story.mp3" preload="auto" autoplay loop muted></audio>
 
-  
-  <script>
-    // Auto-unmute trick for autoplay
-    window.addEventListener("load", () => {
-      const music = document.getElementById("bg-music");
-      setTimeout(() => {
-        music.muted = false;  // unmute after small delay
-        music.play().catch(err => console.log("Autoplay blocked:", err));
-      }, 1000);
-    });
-  </script>
+<script>
+window.addEventListener("load", () => {
+  const music = document.getElementById("bg-music");
 
-
-
-</body>
-</html>
+  // try to autoplay
+  music.play().then(() => {
+    // unmute + fade in after short delay
+    setTimeout(() => {
+      music.muted = false;
+      music.volume = 0;
+      let vol = 0;
+      const fade = setInterval(() => {
+        if (vol < 1) {
+          vol += 0.05;
+          music.volume = vol;
+        } else {
+          clearInterval(fade);
+        }
+      }, 200); // every 0.2s volume +0.05
+    }, 500); // start fade after 0.5s
+  }).catch(err => {
+    console.log("Autoplay blocked:", err);
+  });
+});
+</script>
